@@ -6,10 +6,12 @@ const stringSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    }
+    },
+    createdAt: { type: Date, expires: '1m', default: Date.now }
 
 }, {
-    timestamps: { createdAt: 'createdAt' }
+    //   timestamps: { createdAt: 'createdAt' },
+    versionKey: false
 });
 
 const stringDb = mongoose.model("stringDb", stringSchema);
