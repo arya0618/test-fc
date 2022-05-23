@@ -1,8 +1,8 @@
 'use strict';
 const mongoose = require("mongoose");
 const { mongoConstants } = require("../config/app-config")
-    // const logger = require("./logger");
-console.info(">>> ", process.env.DB_URL);
+
+// console.info(">>> ", process.env.DB_URL);
 
 
 /**

@@ -3,9 +3,6 @@
 // Development specific configuration
 
 
-console.log(">>> log ", process.env.DB_URL);
-
-
 module.exports.appConstants = {
 
     "baseRoute": "/api/v1"

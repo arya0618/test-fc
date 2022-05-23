@@ -29,18 +29,9 @@ router.get('/health', (req, res) => {
 });
 
 
-router.post('/create', async(req, res) => {
-
-    try {
-        let result = await strController.createData(req, res)
-        return result;
-    } catch (err) {
-        return res.json({ message: "fail" })
-    }
 
 
-});
-
+// ============ API routes for create new record  ==========
 router.post('/create', async(req, res) => {
 
     try {
@@ -52,6 +43,7 @@ router.post('/create', async(req, res) => {
 
 
 });
+// ============ API routes for read all records  ==========
 router.get('/read-all', async(req, res) => {
 
     try {
@@ -64,6 +56,7 @@ router.get('/read-all', async(req, res) => {
 
 });
 
+// ============ API routes for get data by given ID  ==========
 router.get('/read/:id', async(req, res) => {
 
     try {
@@ -76,6 +69,7 @@ router.get('/read/:id', async(req, res) => {
 
 });
 
+// ============ API routes for delete by given ID  ==========
 router.delete('/remove/:id', async(req, res) => {
 
     try {
@@ -88,6 +82,8 @@ router.delete('/remove/:id', async(req, res) => {
 
 });
 
+
+// ============ API routes for delete all data ==========
 router.get('/remove-all', async(req, res) => {
 
     try {
@@ -101,6 +97,5 @@ router.get('/remove-all', async(req, res) => {
 });
 
 
-// ============ API routes ==========
 
 module.exports = router;

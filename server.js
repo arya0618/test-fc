@@ -23,8 +23,8 @@ const morganFormat = process.env.NODE_ENV !== "production" ? "dev" : "uat";
 app.use(appConfig.appConstants.baseRoute, routes);
 
 
-console.log("process.env.API_PORT:: ", process.env.API_PORT)
-    //=========server started=======
+//console.log("process.env.API_PORT:: ", process.env.API_PORT)
+//=========server started=======
 app.listen(process.env.API_PORT, () => {
 
     console.info(`Api listening on port ${process.env.API_PORT}!`);

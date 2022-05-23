@@ -68,7 +68,14 @@ module.exports.getById = async function(req, res) {
         if (getDatafromDb.length !== 0) {
             return apiResponse.successResponseWithData(res, "Data found on given Id", getDatafromDb[0]);
         } else {
-            return apiResponse.notFoundResponse(res, "Data not found", );
+            //return apiResponse.notFoundResponse(res, "Data not found", );
+            let newData = new stringModel()
+            newData.randomStr = randomstring.generate();
+            let saveDb = await newData.save()
+            console.log("saveDb :", saveDb)
+            if (saveDb) {
+                return apiResponse.successResponseWithData(res, "new record created", saveDb);
+            }
         }
 
     } catch (err) {
